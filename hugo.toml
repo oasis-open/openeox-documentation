@@ -1,0 +1,4 @@
+locale = 'en-US'
+title = 'OpenEoX'
+disableKinds = ["taxonomy", "RSS", "sitemap"]
+ignoreFiles = [".license$"]

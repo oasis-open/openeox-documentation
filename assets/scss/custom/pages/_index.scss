@@ -1,0 +1,34 @@
+// SPDX-License-Identifier: Apache-2.0
+// SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+
+.screen-2 {
+  &__icon {
+    height: 80px;
+    width: 80px;
+    box-sizing: content-box;
+  }
+}
+
+.index-container {
+  max-width: 1440px;
+}
+
+.index {
+  h2 {
+    font-weight: 570;
+    margin-bottom: 1.5rem;
+  }
+
+  section {
+    padding-block: 36px;
+    padding-inline: 16px;
+
+    @include media-breakpoint-up(lg)  {
+      padding-block: 32px 24px;
+    }
+
+    @include media-breakpoint-up(xl)  {
+      padding-block: 40px 32px;
+    }
+  }
+}

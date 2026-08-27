@@ -1,0 +1,20 @@
+[
+    {
+        "url": "https://www.oasis-open.org/2025/04/29/oasis-openeox-white-paper-to-advance-global-framework-for-coordinated-product-end-of-life-security-disclosures/",
+        "label": "Latest OpenEoX Press Release",
+        "icon": "news.svg",
+        "style": "blue"
+    },
+    {
+        "url": "https://docs.oasis-open.org/openeox/standardization-framework/openeox-standardization-framework-technical-report.pdf",
+        "label": "OpenEoX Paper",
+        "icon": "pdf.svg",
+        "style": "red"
+    },
+    {
+        "url": "https://github.com/oasis-tcs/openeox",
+        "label": "GitHub repository",
+        "icon": "github.svg",
+        "style": "turquoise"
+    }
+]

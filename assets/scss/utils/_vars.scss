@@ -1,0 +1,21 @@
+// SPDX-License-Identifier: Apache-2.0
+// SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$bp-xxl: 1400px;
+
+$font-family-base: 'Jost', Arial, Helvetica, sans-serif;
+
+$font-size-base: 1.2rem;
+$h1-font-size: clamp(5rem, calc(3.8rem + 2vw), 7rem);
+$h2-font-size: clamp(2.6rem, calc(1.5rem + 0.8vw), 3.7rem);
+$h3-font-size: clamp(1.6rem, calc(1.2rem + 0.5vw), 2.4rem);
+
+$transition-slow: all 0.35s ease-in-out;
+$transition-fast: all 0.23s ease-in-out;
+
+$primary: #25292c;
+$secondary: #143a7f;

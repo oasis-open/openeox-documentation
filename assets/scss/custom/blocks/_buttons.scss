@@ -1,0 +1,45 @@
+// SPDX-License-Identifier: Apache-2.0
+// SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+
+$colors: (
+  blue: (
+    light: #47b5ed,
+    dark: #1c97d4,
+  ),
+  red: (
+    light: #ff5e5e,
+    dark: #ff0f0f,
+  ),
+  turquoise: (
+    light: #40b0bf,
+    dark: #0f7e8d,
+  ),
+);
+
+@each $name, $color in $colors {
+  .btn-#{$name} {
+    background-color: map-get($color, light);
+    box-shadow: 0 3px 3px 0 rgba(map-get($color, dark), 0.2);
+
+    &:hover {
+      background-color: map-get($color, dark);
+      color: #ffffff;
+    }
+  }
+}
+
+.btn-index {
+  color: #ffffff;
+  font-weight: 555;
+  line-height: 2;
+}
+
+.btn {
+  transition: $transition-fast;
+}
+
+.btn-icon {
+  height: 28px;
+  width: 28px;
+  box-sizing: content-box;
+}

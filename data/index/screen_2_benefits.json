@@ -1,0 +1,17 @@
+[
+    {
+      "header": "Addressing Inconsistency",
+      "description": "Aimed to address inconsistent product lifecycle status representation in commercial and open source software and hardware.",
+      "icon": "writing.svg"
+    },
+    {
+      "header": "Machine Readable",
+      "description": "The machine-readable nature of the OpenEoX specification opens the door to automation and integration with other tools and platforms.",
+      "icon": "rocket.svg"
+    },
+    {
+      "header": "Cybersecurity",
+      "description": "Helping reduce significant risks for cybersecurity and vulnerability management.",
+      "icon": "lock.svg"
+    }
+]

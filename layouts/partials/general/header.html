@@ -1,0 +1,35 @@
+<!--
+  SPDX-License-Identifier: Apache-2.0
+  SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+-->
+
+<header class="sticky-top bg-light shadow-sm">
+  <nav class="navbar mx-auto p-0 w-100 mx-auto">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <!-- #region: Logo -->
+      <b class="p-3 py-lg-0 fs-4 header-logo">OASIS OpenEoX</b>
+      <!-- #endregion -->
+
+      <!-- #region: Desktop menu -->
+      <div class="d-none d-lg-flex align-items-center">
+        {{ partial "general/navbar-links.html" . }}
+      </div>
+      <!-- #endregion -->
+
+      <!-- #region: Toggler collapsible menu -->
+      <div class="d-lg-none">
+        <input type="checkbox" id="nav-toggle" class="d-none">
+        <label for="nav-toggle" class="navbar__toggler">
+          <span></span>
+        </label>
+      </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- #region: Mobile collapsible menu -->
+    <div class="navbar__menu-mobile d-lg-none w-100">
+      {{ partial "general/navbar-links.html" . }}
+    </div>
+    <!-- #endregion -->
+  </nav>
+</header>

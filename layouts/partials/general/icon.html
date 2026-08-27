@@ -1,0 +1,22 @@
+<!--
+  SPDX-License-Identifier: Apache-2.0
+  SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+-->
+
+{{ $iconName := "" }}
+{{ $iconClass := "" }}
+
+{{ if reflect.IsMap . }}
+  {{ $iconName = .name | default "" }}
+  {{ $iconClass = .class | default "" }}
+{{ else }}
+  {{ $iconName = . }}
+{{ end }}
+
+{{ if $iconName }}
+  {{ with resources.Get (printf "icons/%s" $iconName) }}
+    <span{{ with $iconClass }} class="{{ . }}"{{ end }}>
+      {{ .Content | safeHTML }}
+    </span>
+  {{ end }}
+{{ end }}

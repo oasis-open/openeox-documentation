@@ -1,0 +1,20 @@
+<!--
+  SPDX-License-Identifier: Apache-2.0
+  SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+-->
+
+<ul class="navbar-nav gap-lg-2">
+  {{ range hugo.Data.navlinks }}
+    <li>
+      <a
+        href="{{ .url }}"
+        class="px-3 py-3 nav-link"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <div class="nav-link__icon">{{ partial "general/icon.html" .icon }}</div>
+        <div class="nav-link__label">{{ .label }}</div>
+      </a>
+    </li>
+  {{ end }}
+</ul>

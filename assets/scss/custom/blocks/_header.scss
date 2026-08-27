@@ -1,0 +1,119 @@
+// SPDX-License-Identifier: Apache-2.0
+// SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+
+.navbar {
+  max-width: 1600px;
+
+  &__toggler {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    span,
+    &::before,
+    &::after {
+      content: '';
+      width: 24px;
+      height: 2px;
+      background-color: #000;
+      position: absolute;
+      transition: $transition-slow;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &::before {
+      top: 10px;
+    }
+
+    &::after {
+      bottom: 10px;
+    }
+  }
+
+  #nav-toggle:checked + &__toggler {
+    span {
+      opacity: 0;
+    }
+
+    &::before {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__menu-mobile {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition-slow;
+  }
+
+  &:has(#nav-toggle:checked) {
+    .navbar__menu-mobile {
+      max-height: 439px;
+    }
+  }
+}
+
+.navbar-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @include media-breakpoint-down(lg) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  @include media-breakpoint-up(xl) {
+    gap: 16px;
+  }
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  gap: 8px;
+  padding-left: 24px;
+  color: $primary;
+  transition: all 0.35s;
+  font-size: 24px;
+  font-weight: 560;
+  white-space: nowrap;
+  align-items: center;
+
+  &:hover {
+    color: $secondary;
+  }
+
+  &__icon {
+    height: 35px;
+    width: 35px;
+    box-sizing: content-box;
+  }
+
+  &__label {
+    font-size: 1.1rem;
+    margin-top: 6px;
+  }
+}

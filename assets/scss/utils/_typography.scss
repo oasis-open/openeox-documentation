@@ -1,0 +1,48 @@
+// SPDX-License-Identifier: Apache-2.0
+// SPDX-FileCopyrightText: 2026 OASIS OpenEoX TC
+
+/* Variable font files */
+@font-face {
+  font-family: 'Jost';
+  src: url(../fonts/jost/Jost-VariableFont_wght.ttf)
+    format('truetype-variations');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Jost';
+  src: url(../fonts/jost/Jost-Italic-VariableFont_wght.ttf)
+    format('truetype-variations');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Static fallback for legacy browsers */
+@supports not (font-variation-settings: 'wght' 400) {
+  @font-face {
+    font-family: 'Jost';
+    src: url(../fonts/jost/Jost-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Jost';
+    src: url(../fonts/jost/Jost-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Jost';
+    src: url(../fonts/jost/Jost-Italic.ttf) format('truetype');
+    font-weight: 400;
+    font-style: italic;
+  }
+  @font-face {
+    font-family: 'Jost';
+    src: url(../fonts/jost/Jost-BoldItalic.ttf) format('truetype');
+    font-weight: 700;
+    font-style: italic;
+  }
+}

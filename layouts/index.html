@@ -1,0 +1,183 @@
+{{ define "main" }}
+<main class="index">
+  <!-- #region: OASIS Header -->
+  <section class="index-container container w-auto mx-auto d-flex align-items-center gap-2 gap-lg-3 gap-xl-4 flex-column flex-md-row">
+    <div class="col-12 col-md-5 col-lg-4 mw-100">
+      <img class="d-block h-auto w-100" src="{{ "img/logo.png" | relURL }}" alt="OpenEoX logo">
+    </div>
+
+    <div>
+      <p>
+        OpenEoX is an initiative aimed at standardizing the way End-of-Life (EOL)
+        and End-of-Support (EOS) information is exchanged within the software and
+        hardware industries. Covering both vendors and open-source maintainers,
+        OpenEoX strives to provide a transparent, efficient, and unified approach
+        to managing product lifecycles.
+      </p>
+      <p>
+        In today's fast-paced world of technological advancements, it's crucial
+        for businesses and individuals to stay informed about the lifecycle status
+        of the products they rely on. OpenEoX addresses this need by offering
+        a common framework that simplifies the process of managing and sharing EOL
+        and EOS information across the industry.
+      </p>
+      <p>
+        <i>LATEST NEWS!</i> <b>Cisco, Dell Technologies, IBM, Microsoft, Oracle,
+        Red Hat,</b> and Others Support New Guidance to Effectively Manage
+        Product Lifecycles Across the Software supply Chain.
+      </p>
+      <div class="g-4 flex-column flex-sm-row gap-3">
+        {{ range hugo.Data.index.screen_1_buttons }}
+          <a
+            href="{{ .url }}"
+            class="btn btn-sm btn-index btn-{{ .style }} d-inline-flex gap-4 px-3 py-1 m-2"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <div>{{ .label }}</div>
+            <div class="btn-icon">{{ partial "general/icon.html" .icon }}</div>
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+  <!-- #endregion -->
+
+  <!-- #region: Opportunities and Benefits -->
+  <section class="bg-light">
+    <div class="index-container container my-3 my-xl-4">
+      <div class="row flex-column flex-sm-row">
+        <h2 class="text-primary text-center">Opportunities and Benefits</h2>
+        <div class="row gap-4 gap-lg-0 w-100 mx-auto flex-column flex-md-row justify-content-between justify-content-md-evenly justify-content-lg-between align-items-center align-items-md-start">
+          {{ range hugo.Data.index.screen_2_benefits }}
+            <div class="screen-2__card col-10 col-md-5 col-lg-4 px-lg-4 ">
+              <div class="screen-2__icon mx-auto my-4">
+                {{ partial "general/icon.html" (dict "name" .icon "class" "text-secondary") }}
+              </div>
+              <h3 class="screen-2__header mx-auto text-center">
+                {{ .header }}
+              </h3>
+              <p class="d-block screen-2__description">
+                {{ .description }}
+              </p>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #endregion -->
+
+  <!-- #region: Lightweight and Standalone Implementations -->
+  <section>
+    <div class="index-container container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-12 col-lg-5">
+          <h2 class="text-primary">Lightweight and Standalone Schema</h2>
+          <p class="pe-3 fs-6 fw-normal">
+            By potentially integrating with SBOMs and CSAF/VEX documents,
+            OpenEoX can enable organizations to incorporate end-of-life and
+            end-of-support information into existing security and compliance
+            workflows. This harmonization ensures that lifecycle information is
+            part of the broader picture when assessing the security and viability
+            of software and hardware components.
+          </p>
+          <p class="pe-3 mb-0 fs-6 fw-normal">
+            A standalone schema also makes it flexible and adaptable to a variety
+            of environments. OpenEoX can be adopted widely without requiring
+            extensive system overhauls.
+          </p>
+        </div>
+        <div class="col-12 col-lg-7 pt-5">
+          <div class="d-block h-auto w-100">
+            {{ with resources.Get "img/implementation-infographic.svg" }}
+              {{ .Content | safeHTML }}
+            {{ end }}
+          </div>
+          <div class="text-center pt-2">OpenEoX Lightweight and Standalone Implementations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #endregion -->
+
+  <!-- #region: Why is OpenEoX important? -->
+  <section>
+    <div class="index-container container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md">
+          <h2 class="text-primary">Why is OpenEoX important?</h2>
+          <div class="fs-6 fw-normal">
+            <p><b>Reducing Cybersecurity Risk</b></p>
+            <p>
+              One of the primary benefits of the OpenEoX is its ability to reduce
+              cybersecurity risk. By having a standardized EOL and EOS policy
+              across vendors and open-source maintainers, companies can quickly
+              identify when products are no longer supported or updated. This
+              knowledge enables organizations to retire or replace outdated,
+              unsupported products that may be more susceptible to security
+              vulnerabilities. As a result, companies can maintain a more
+              secure IT environment, reduce the risk of data breaches, and better
+              protect their assets.
+            </p>
+
+            <p><b>Enhancing Vulnerability Management</b></p>
+            <p>
+              The OpenEoX can also significantly improve vulnerability management.
+              With a standardized and machine-readable format for EOL and EOS
+              information, organizations can automate the tracking of product
+              lifecycles. Automation allows for real-time monitoring and alerts,
+              ensuring that IT teams are informed about upcoming EOL and EOS dates.
+              This timely information empowers organizations to proactively address
+              potential security vulnerabilities by patching or upgrading affected
+              products before they become problematic.
+            </p>
+
+            <p><b>Enabling Automation and Integration</b></p>
+            <p>
+              The machine-readable nature of the OpenEoX standard opens the door
+              to automation and integration with other tools and platforms.
+              For instance, vulnerability scanners and security information
+              and event management (SIEM) systems can incorporate OpenEoX data
+              to provide more accurate and up-to-date information about product
+              lifecycles. This integration results in a more comprehensive
+              understanding of an organization's security posture, ultimately
+              allowing for better decision-making and risk mitigation.
+            </p>
+
+            <p><b>Other Benefits of OpenEoX</b></p>
+            <p>
+              In addition to improving cybersecurity and vulnerability management,
+              the OpenEoX offers several other benefits:
+            </p>
+            <ul>
+              <li>
+                <b>Simplified Product Management:</b> A standardized approach
+                  to EOL and EOS policies simplifies the process of managing
+                  product lifecycles for software providers, vendors, and suppliers.
+                  This efficiency leads to reduced administrative overhead and
+                  improved customer satisfaction.
+              </li>
+              <li>
+                <b>Enhanced Customer Confidence:</b> By adopting industry-wide
+                  standards for EOL and EOS programs, software providers
+                  can demonstrate their commitment to transparency, customer support,
+                  and best practices. This transparency builds trust and confidence
+                  among customers, leading to increased loyalty and long-term
+                  business relationships.
+              </li>
+              <li>
+                <b>Facilitated Transition:</b> A standardized EOL and EOS program
+                  can help ensure a smooth transition for customers as they migrate
+                  to new technology solutions. This seamless transition results
+                  in reduced downtime, fewer support issues, and a better overall
+                  experience.
+              </li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- #endregion -->
+</main>
+{{ end }}
